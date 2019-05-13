@@ -61,22 +61,29 @@ middleImg.setAttribute(
 );
 // End Images
 
-// Navigation
-
 // general
 
 // end general
 
-const nav = document.querySelectorAll('a');
-console.log(nav);
-
+// Navigation
 const navLinks = document.querySelectorAll('nav a');
 
 navLinks.forEach(function(ele, i) {
-  console.log(ele, i);
   ele.textContent = siteContent['nav'][`nav-item-${i + 1}`];
   ele.style.color = 'green';
 });
+
+const newLink1 = document.createElement('a');
+newLink1.textContent = 'Schedule';
+newLink1.href = '#';
+const nav = document.querySelector('nav');
+nav.appendChild(newLink1).style.color = 'green';
+
+const newLink2 = document.createElement('a');
+newLink2.textContent = 'Home';
+newLink2.href = '#';
+newLink2.style.color = 'green';
+nav.prepend(newLink2);
 // End navigation
 
 // cta
