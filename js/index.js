@@ -59,4 +59,66 @@ middleImg.setAttribute(
   siteContent['main-content']['middle-img-src'],
   '../img/mid-page-accent.jpg'
 );
-// Images
+// End Images
+
+// Navigation
+
+// general
+
+// end general
+
+const nav = document.querySelectorAll('a');
+console.log(nav);
+
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(function(ele, i) {
+  console.log(ele, i);
+  ele.textContent = siteContent['nav'][`nav-item-${i + 1}`];
+  ele.style.color = 'green';
+});
+// End navigation
+
+// cta
+const ctaH1 = document.querySelector('.cta .cta-text h1');
+ctaH1.textContent = siteContent.cta.h1;
+
+const ctaButton = document.querySelector('button');
+ctaButton.textContent = siteContent.cta.button;
+// end cta
+
+// top content
+const tHeader = document.querySelectorAll('.top-content .text-content h4');
+tHeader[0].textContent = siteContent['main-content']['features-h4'];
+tHeader[1].textContent = siteContent['main-content']['about-h4'];
+
+const tContent = document.querySelectorAll('.top-content .text-content p');
+tContent[0].textContent = siteContent['main-content']['features-content'];
+tContent[1].textContent = siteContent['main-content']['about-content'];
+// end top content
+
+// bottom content
+const bHeader = document.querySelectorAll('.bottom-content .text-content h4');
+bHeader[0].textContent = siteContent['main-content']['services-h4'];
+bHeader[1].textContent = siteContent['main-content']['product-h4'];
+bHeader[2].textContent = siteContent['main-content']['vision-h4'];
+
+const bContent = document.querySelectorAll('.bottom-content .text-content p');
+bContent[0].textContent = siteContent['main-content']['services-content'];
+bContent[1].textContent = siteContent['main-content']['product-content'];
+bContent[2].textContent = siteContent['main-content']['vision-content'];
+// end bottom content
+
+// address
+const addressH4 = document.querySelector('.contact h4');
+addressH4.textContent = siteContent['contact']['contact-h4'];
+const address = document.querySelectorAll('.contact p');
+address[0].textContent = siteContent['contact'].address;
+address[1].textContent = siteContent['contact'].phone;
+address[2].textContent = siteContent['contact'].email;
+// end address
+
+// footer
+const footer = document.querySelector('footer p');
+footer.textContent = siteContent['footer']['copyright'];
+// end footer
