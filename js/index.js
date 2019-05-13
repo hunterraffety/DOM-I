@@ -42,6 +42,21 @@ const siteContent = {
   }
 };
 
-// Example: Update the img src for the logo
+// Images
 let logo = document.getElementById('logo-img');
-logo.setAttribute('src', siteContent['nav']['img-src']);
+logo.setAttribute('src', siteContent['nav']['img-src'], '../img/logo.png');
+
+let ctaImg = document.getElementById('cta-img');
+ctaImg.setAttribute(
+  'src',
+  siteContent['cta']['img-src'],
+  '../img/header-img.png'
+);
+
+let middleImg = document.getElementById('middle-img');
+middleImg.setAttribute(
+  'src',
+  siteContent['main-content']['middle-img-src'],
+  '../img/mid-page-accent.jpg'
+);
+// Images
